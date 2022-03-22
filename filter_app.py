@@ -6,7 +6,7 @@ import requests
 
 def filter_content(soup, i, n_recomm, n_reply, n_cnt):
     gall_subject = soup.select('td.gall_subject')[i].text
-    if gall_subject == '공지':
+    if gall_subject in ['공지', '설문']:
         return False
     title = soup.select('td.gall_tit')[i].text.split('\n')
     gall_rep = title[-1]
