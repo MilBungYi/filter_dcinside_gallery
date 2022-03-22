@@ -411,7 +411,7 @@ def save_select():
 save_variable = IntVar()
 check_save = Checkbutton(frame_filter, text='파일 저장', variable=save_variable, command=save_select)
 check_save.pack(side='left', padx=10, pady=5, fill='x')
-save_variable.set(1)
+save_variable.set(0)
 
 
 # 저장 경로 프레임
@@ -494,5 +494,6 @@ log_scrollbar.config(command=list_log.yview)
 
 root.resizable(False, False)
 root.geometry("731x672")
+save_select()
 
 root.mainloop()
