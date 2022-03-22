@@ -2,19 +2,39 @@
 디시공앱의 필터링 기능을 PC에서도 사용하기 위한 앱 개발 프로젝트
 
 ## 필요한 패키지
-- `python=3.8.8`
-- `pandas=1.2.4`
-- `tqdm=4.59.0`
-- `beautifulsoup4=4.9.3`
-- `requests=2.25.1`
+- `python=3.7.6`
+- `pandas==1.3.5`
+- `tqdm==4.59.0`
+- `beautifulsoup4==4.6.0`
+- `requests==2.26.0`
+- `lxml==4.6.3`
+- `openpyxl==3.0.7`
 
 ## 구현 목록
 - [x] 입력 받은 갤러리의 페이지 내에서 필터링
 - [x] 추천수, 댓글수, 조회수에 따라 필터링
-- [ ] tkinter를 이용한 GUI 개발
+- [x] tkinter를 이용한 GUI 개발
+  - [x] log 남기기
 
 ## 실행 예시
-1. filter_app.py
+1. filter_app_tkinter.py
+갤러리 주소와 필터값들을 입력하고 실행 버튼 클릭
+- 추천수, 댓글수, 조회수에 대하여 값 이상/이하 선택 가능
+- 결과를 파일로 저장할 것인지 선택 가능
+- 결과 목록을 더블클릭하면 해당 게시글로 이동
+
+![main](https://user-images.githubusercontent.com/102043866/159496136-f2e03bac-2a10-4c32-b778-ee43f74e6bb9.png)  
+갤러리
+
+![minor](https://user-images.githubusercontent.com/102043866/159496149-2ea1d20e-4182-4714-8fdb-540ebe59665b.png)  
+마이너 갤러리
+
+![mini](https://user-images.githubusercontent.com/102043866/159496145-2fffef8f-c76c-4bb7-88f6-6ab865c77b61.png)  
+미니 갤러리
+
+
+
+2. filter_app.py
 실행하면 값을 입력받아 필터 기능 실행
 - 갤러리 주소
 - 검색할 페이지 범위: 1 이상의 두 숫자 입력
@@ -25,7 +45,7 @@
 ![app_py](https://user-images.githubusercontent.com/102043866/159292809-5f0af79a-5dee-473e-860b-881149938f3d.png)
 
 
-2. filter_app_arg.py
+3. filter_app_arg.py
 ```
 usage: filter_app_arg.py [-h] --gallery GALLERY [--reply REPLY] [--cnt CNT]
                          [--recommend RECOMMEND] [--pages PAGES] [--save SAVE]
